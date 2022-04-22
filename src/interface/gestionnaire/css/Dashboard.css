@@ -1,0 +1,10 @@
+
+.title {
+    font-size: 2rem;
+    display: grid;
+    padding : 10px;
+}
+
+.container_dashboard{
+    display: grid;
+}

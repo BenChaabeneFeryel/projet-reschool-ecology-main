@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Mitr:wght@300;400&display=swap");
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 0.5rem;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.card {
+  line-height: 1.2;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+[class*="fa-"] {
+  font-size: 2rem;
+  filter: drop-shadow(0px 10px 15px rgba(55, 84, 170, 0.25));
+}
+
+.number {
+  /* font-family: "Mitr", "Montserrat", "Segoe UI", Tahoma, Geneva, Verdana,
+    sans-serif; */
+  font-size: 1.5rem;
+}
+  
+  .fa-quora {
+    color: #b92b27;
+  }
+  
+  .fa-facebook {
+    color: #3b5999;
+  }
+  
+  .fa-code {
+    color: #34465d;
+  }
+  
+  .fa-check {
+    color: #27ae60;
+  }
+  
+  @media screen and (max-width: 576px) {
+    .container {
+      grid-template-columns: 1fr;
+    }
+    .card {
+      padding: 1rem 0;
+    }
+  }

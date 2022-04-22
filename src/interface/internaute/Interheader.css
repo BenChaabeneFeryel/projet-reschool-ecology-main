@@ -1,0 +1,20 @@
+#headertitle:hover {
+    color :green;
+}
+
+
+@media only screen and (max-width: 700px) {
+    .menu{
+        transition: 0.7s all ease;
+        display: none;
+    }
+
+    .navbar{
+        display: none;
+        /* background-color: red ; */
+    }
+
+    .item{
+        /* background-color: red ; */
+    }
+}
