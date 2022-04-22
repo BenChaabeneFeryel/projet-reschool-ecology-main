@@ -81,11 +81,11 @@ const Chartline = () => {
       <>
         <Card sx={{backgroundColor:"white"}}>
           <Container>
-              <CardHeader sm={5}>
-                <h4 id="traffic" className="card-title mb-0">
+              <Typography>
+                <h4 id="traffic" className="card-title mb-0" align="center">
                   Quantités vendus des déchets par mois
                 </h4>
-              </CardHeader>
+              </Typography>
               <Grid container sm={15}>
                 <Select
                   className="float-end me-3"
@@ -117,26 +117,26 @@ const Chartline = () => {
                   {
                       label: 'Plastique',
                       data: ventesPlastique,
-                      borderColor: 'rgb(18, 102, 241)',
-                      backgroundColor: 'rgba(18, 102, 241, 0.8)',
+                      borderColor: '#321fdb',
+                      backgroundColor: '#321fdb',
                   },
                   {
                       label: 'Papier',
                       data: ventesPapier,
-                      borderColor: 'rgb(255, 173, 13)',
-                      backgroundColor: 'rgba(255, 173, 13, 0.8)',
+                      borderColor: '#f9b115',
+                      backgroundColor: '#f9b115',
                   },
                   {
                       label: 'Composte',
                       data: ventesComposte,
-                      borderColor: 'rgb(0, 183, 74)',
-                      backgroundColor: 'rgba(0, 183, 74, 0.8)',
+                      borderColor: '#2eb85c',
+                      backgroundColor: '#2eb85c',
                   },
                   {
                       label: 'Canette',
                       data: ventesCanette,
-                      borderColor: 'rgb(249, 49, 84)',
-                      backgroundColor: 'rgba(249, 49, 84, 0.8)',
+                      borderColor: '#e55353',
+                      backgroundColor: '#e55353',
                   },
                   ],
               }} />

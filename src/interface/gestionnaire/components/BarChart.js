@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Select from 'react-select'
-import { Card, CardHeader, Grid } from '@mui/material';
+import { Card, Container, Typography, Grid } from '@mui/material';
 import {
     Chart as ChartJS,
     CategoryScale,
@@ -25,7 +25,7 @@ const Barchart = () => {
     const [quantitemois, setQuantiteMois] = React.useState([])
     useEffect(() => {
         ;(async function getStatus() {
-        const response = await fetch('http://127.0.0.1:8000/api/somme-dechets-par-mois')
+        const response = await fetch('http://ami.monconstat.tech/api/somme-dechets-par-mois')
         const json = await response.json()
 
         setTimeout(getStatus, 60000)
@@ -78,8 +78,13 @@ const Barchart = () => {
     return (
         <div>
             <Card sx={{backgroundColor:"white"}}>
-                <CardHeader>
-                    <Grid sm={15} >
+                <Container>
+                    <Typography>
+                        <h4 id="traffic" className="card-title mb-0" align="center">
+                        Quantitées collectées totales par mois/année
+                        </h4>
+                    </Typography>
+                    <Grid container sm={15} >
                         <Select
                             className="float-end me-3"
                             onChange={onchangeSelect}
@@ -90,17 +95,17 @@ const Barchart = () => {
                             placeholder={annee}
                         />
                     </Grid>
-                </CardHeader>
+                </Container>
                 <Bar 
                 options={{ 
                     responsive: true,
                     plugins: {
                         legend: {
-                        position: 'top',
+                            position: 'top',
                         },
                         title: {
-                        display: false,
-                        text: 'Quantitées collectées totales par mois/année et par établissement',
+                            display: false,
+                            text: 'Quantitées collectées totales par mois/année et par établissement',
                         },
                     },
                 }} 
@@ -108,24 +113,24 @@ const Barchart = () => {
                     labels: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Aout', 'Septembre','Octobre','Novembre','Decembre'],
                     datasets: [
                         {
-                        label: 'Plastique',
-                        data: dataplastique,
-                        backgroundColor: 'rgba(18, 102, 241, 0.7)',
+                            label: 'Plastique',
+                            data: dataplastique,
+                            backgroundColor: '#321fdb',
                         },
                         {
-                        label: 'Papier',
-                        data: datapapier,
-                        backgroundColor: 'rgba(255, 173, 13, 0.7)',
+                            label: 'Papier',
+                            data: datapapier,
+                            backgroundColor: '#f9b115',
                         },
                         {
-                        label: 'Composte',
-                        data: datacomposte,
-                        backgroundColor: 'rgba(0, 183, 74, 0.7)',
+                            label: 'Composte',
+                            data: datacomposte,
+                            backgroundColor: '#2eb85c',
                         },
                         {
-                        label: 'Canette',
-                        data: datacanette,
-                        backgroundColor: 'rgba(249, 49, 84, 0.7)',
+                            label: 'Canette',
+                            data: datacanette,
+                            backgroundColor: '#e55353',
                         },
                     ],
                 }} 

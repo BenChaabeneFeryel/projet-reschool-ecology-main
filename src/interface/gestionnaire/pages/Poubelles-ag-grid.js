@@ -18,7 +18,7 @@ const PoubellesURL = 'https://ami.monconstat.tech/api/poubelle'
 
 
 const initialValue = { 
-  id_bloc_poubelle:"", 
+  id:"", 
   bloc_poubelle_id:"",
   nom:"",
   capacite_poubelle:"", 
@@ -236,7 +236,7 @@ export default function Poubelles() {
         </Item>
         <Item>
           <select style={{marginRight:'5px' , padding:"10px" , borderRadius:"5px",border:"none"}} onChange={(e)=>onPaginationChange(e.target.value)}>
-            <option value='5'>5</option>
+            {/* <option value='5'>5</option> */}
             <option value='25'>25</option>
             <option value='50'>50</option>
             <option value='100'>100</option>
@@ -255,7 +255,7 @@ export default function Poubelles() {
           columnTypes={columnTypes}
           rowHeight={rowHeight}
           pagination={true}
-          paginationPageSize={5}
+          paginationPageSize={25}
         />
       </div>
       <DialogPoubelle 

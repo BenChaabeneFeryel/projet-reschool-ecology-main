@@ -17,16 +17,16 @@ export function DialogPoubelle({open,handleClose,data,onChange,handleFormSubmit}
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
-      <DialogTitle id="alert-dialog-title"sx={{backgroundColor: 'white'}}>
+      <DialogTitle id="alert-dialog-title" sx={{backgroundColor: 'white'}}>
         {id?"Modifier Poubelle":"Ajouter Nouveau Poubelle"}
       </DialogTitle>
       <DialogContent sx={{backgroundColor: 'white'}}>
          <form>
-          <TextField id="id" 
+          {/* <TextField id="id" 
             value={id} onChange={e=>onChange(e)} 
             placeholder="Entrer l'identifiant de la Poubelle" label="Identifiant Poubelle" 
             variant="outlined" margin="dense" fullWidth 
-          />
+          /> */}
           <TextField id="id_bloc_poubelle" 
             value={bloc_poubelle_id} onChange={e=>onChange(e)} 
             placeholder="Entrer l'identifiant du bloc poubelle" label="Identifiant Bloc Poubelle" 
@@ -57,16 +57,16 @@ export function DialogPoubelle({open,handleClose,data,onChange,handleFormSubmit}
             placeholder="Enter le Temps de Remplissage" label="Temps de Remplissage" 
             variant="outlined" margin="dense" fullWidth 
           />
-          <TextField id="nom_etablissement" 
+          {/* <TextField id="nom_etablissement" 
             value={nom_etablissement} onChange={e=>onChange(e)} 
             placeholder="Enter le Nom de l'établissement" label="Nom de l'Etablissement"
             variant="outlined" margin="dense" fullWidth 
-          />
-          <TextField id="adresse" 
+          /> */}
+          {/* <TextField id="adresse" 
             value={adresse} onChange={e=>onChange(e)} 
             placeholder="Enter l'Adresse'" label="Adresse" 
             variant="outlined" margin="dense" fullWidth 
-          />       
+          />        */}
          </form>
         </DialogContent>
         <DialogActions sx={{backgroundColor: 'white'}}>

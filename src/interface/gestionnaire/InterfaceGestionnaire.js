@@ -307,7 +307,7 @@ export default function InterfaceGestionnaire() {
             <Outlet/>
           </Box>
         </Box>
-        <AppBar open={open} color="primary" sx={{ backgroundColor: 'lightgrey',top: 'auto', bottom: 0, height:27,textAlign:'center'}}>
+        <AppBar open={open} color="primary" position="static" sx={{ backgroundColor: 'lightgrey', top: 'auto', bottom: 0, height:27,textAlign:'center'}}>
           <Box>
             RE:SCHOOL © 2022
             <a href='https://reschoolwethink.education/'> Site web</a>

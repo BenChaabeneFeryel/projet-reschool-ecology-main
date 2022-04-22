@@ -12,6 +12,16 @@ const dashboardURL = 'https://ami.monconstat.tech/api/dashboard'
 const DechetsURL = 'https://127.0.0.1:8000/api/somme-total-dechet-zone-depot'
 
 export default function Counter() {
+    // const [count, setcount] = React.useState([])
+    // useEffect(() => {
+    //     ;(async function getStatus() {
+    //       const vdata = await fetch(DechetsURL)
+    //       const vjson = await vdata.json()
+    
+    //       setTimeout(getStatus, 60000)
+    //       setcount(vjson)
+    //     })()
+    //   }, [])
 
     const [dechets, setDechets] = React.useState([])
     useEffect(() => {
@@ -28,25 +38,25 @@ export default function Counter() {
     <>
         <Container sx={{backgroundColor:"white"}}>
              {/* <Card sx={{backgroundColor:"#321fdb"}}  className='text-white mb-3' style={{ maxWidth: '18rem' }}>
-                <CardHeader>Quantité Totale Plastique</CardHeader>
+                <Typography>Quantité Totale Plastique</Typography>
                 <Typography>
                     {count.somme_depot_actuelle_plastique} Kg
                 </Typography>
             </Card>
             <Card sx={{backgroundColor:"#f9b115"}} className='text-white mb-3' style={{ maxWidth: '18rem' }}>
-                <CardHeader>Quantité Totale Papier</CardHeader>
+                <Typography>Quantité Totale Papier</Typography>
                 <Typography>
                     {count.somme_depot_actuelle_papier} Kg
                 </Typography>
             </Card>
             <Card sx={{backgroundColor:"#2eb85c"}} className='text-white mb-3' style={{ maxWidth: '18rem' }}>
-                <CardHeader>Quantité Totale Composte</CardHeader>
+                <Typography>Quantité Totale Composte</Typography>
                 <Typography>
                     {count.somme_depot_actuelle_composte} Kg
                 </Typography>
             </Card>
             <Card sx={{backgroundColor:"#e55353"}} className='text-white mb-3' style={{ maxWidth: '18rem' }}>
-                <CardHeader>Quantité Totale Canette</CardHeader>
+                <Typography>Quantité Totale Canette</Typography>
                 <Typography>
                     {count.somme_depot_actuelle_canette} Kg
                 </Typography>
