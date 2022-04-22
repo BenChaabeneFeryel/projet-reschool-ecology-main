@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import Container from '@mui/material/Container'
 import { Image ,Segment, Grid, Header, Button, Icon, Divider, Form, Input} from 'semantic-ui-react'
 import images from '../../Global/images/internaute/greys.jpg'
+import trash from '../../Global/images/internaute/trash-green.png'
+
 // import {  TextArea } from 'semantic-ui-react'
 
 export default class InterMain extends Component {
@@ -81,7 +83,7 @@ export default class InterMain extends Component {
                             </Grid.Row>
                         </Grid.Column>
                         <Grid.Column floated='right' width={6}>
-                            <Image bordered rounded size='large' src={images} />
+                            <Image rounded size='large' src={trash} />
                         </Grid.Column>
                     </Grid.Row>
                 </Grid>
