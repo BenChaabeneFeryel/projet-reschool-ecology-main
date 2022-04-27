@@ -15,7 +15,7 @@ import { FaMapMarkedAlt, FaTruckMoving, FaRecycle, FaTrash, FaUser, FaUserTie,Fa
 import { HiUsers } from 'react-icons/hi'
 import { ImUserTie, ImStatsDots } from "react-icons/im";
 import { RiShoppingBasketFill } from "react-icons/ri"
-import { MdReportProblem } from "react-icons/md"
+import { MdReportProblem,MdLogout } from "react-icons/md"
 import { VscTrash } from "react-icons/vsc";
 import RightSideBarGestionnaire from './components/RightSidebar/RightSideBarGestionnaire';
 import Badge from '@mui/material/Badge';
@@ -153,12 +153,15 @@ export default function InterfaceGestionnaire() {
     const handleClick = () => {
       setOpenSubmenu((prev) => !prev);
     };
+
     return (
       <React.Fragment>
         <ListItem button onClick={handleClick}>
-          <ListItemIcon>{item.icon}</ListItemIcon>
-          <ListItemText primary={item.name} />
-          {openSubmenu ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+          <ListItemIcon sx={{ color:'white'}}>
+            {item.icon}
+          </ListItemIcon>
+          <ListItemText primary={item.name} sx={{ color:'white',}} />
+          {openSubmenu ? <ExpandLessIcon sx={{ color:'white'}} /> : <ExpandMoreIcon sx={{ color:'white'}} />}
         </ListItem>
         <Collapse in={openSubmenu} timeout="auto" unmountOnExit>
           <List component="div" disablePadding>
@@ -191,7 +194,7 @@ export default function InterfaceGestionnaire() {
         <Link to="/gestionnaire/login">Register </Link>
         <Link to="/register-gestionnaire">Login </Link>
       </>   )
-  }else{  AuthButtons=( <li><button onClick={logoutSubmit}>Logout</button></li> )
+  }else{  AuthButtons=( <li><button onClick={logoutSubmit}><MdLogout/></button></li> )
   }
 
   const linkDetails = [
